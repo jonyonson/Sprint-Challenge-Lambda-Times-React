@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
 import Tabs from './Tabs';
 import Cards from './Cards';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export default class Content extends Component {
   constructor(props) {
@@ -45,14 +51,14 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="content-container">
+      <Container>
         <Tabs
           selectedTab={this.state.selected}
           selectTabHandler={this.changeSelected}
           tabs={this.state.tabs}
         />
         <Cards cards={this.filterCards()} />
-      </div>
+      </Container>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
-// Complete this Carousel 
+import './Carousel.css'
+
+// Complete this Carousel
 export default class Carousel extends Component {
   constructor(props){
     super(props);
@@ -23,7 +25,7 @@ export default class Carousel extends Component {
   selectedImage = () => {
     return <img src={} style={{display: 'block'}} />
   }
-  
+
   render(){
     return (
       <div className="carousel">
